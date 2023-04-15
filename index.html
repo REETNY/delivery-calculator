@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delivery</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="AJIDE SHAMSIDEEN">
+    <meta name="description" content="Delivery Calculator">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/logo.svg" type="images/x-icon">
+</head>
+<body>
+
+    <main>
+
+        <form action="" id="form">
+
+            <span>
+                <div class="nameLogo"></div>
+                <label for="name">Item Name</label>
+                <input type="text" id="name" class="name">
+            </span>
+
+            <span>
+                <div class="weightLogo"></div>
+                <label for="weight">Weight</label>
+                <input type="number" id="weight" class="weight">
+            </span>
+
+            <span>
+                <div class="valueLogo"></div>
+                <label for="value">Value of Product</label>
+                <input type="text" class="value" id="value">
+            </span>
+
+            <span>
+                <label for="origin">Origin</label>
+                <textarea spellcheck="false" type="text" id="origin" class="origin" wrap="hard" rows="2" cols="20"></textarea>
+            </span>
+
+            <span>
+                <label for="destination">Destination</label>
+                <textarea spellcheck="false" type="text" class="destination" id="destination" wrap="hard" rows="2" cols="20"></textarea>
+            </span>
+
+            <span>
+                <label for="distance">Distance</label>
+                <input type="text" id="distance" readonly>
+            </span>
+
+            <span>
+                <label for="deliveryDate">Timed Arrival</label>
+                <select name="howLong" id="deliveryDate">
+                    <option value="1day">Same Day</option>
+                    <option value="2days">2 Days</option>
+                    <option value="3days">3 Days</option>
+                    <option value="4days">4 Days</option>
+                    <option value="5days">5 Days</option>
+                    <option value="6days">6 Days</option>
+                    <option value="7days">1 Week</option>
+                </select>
+            </span>
+
+            <span>
+                <label for="price">Pricing</label>
+                <input type="text" id="price" readonly>
+            </span>
+
+            <span>
+                <label for="arrived">Expected Arrival</label>
+                <input type="text" id="arrival" readonly>
+            </span>
+
+            <span class="btnForm">
+                <button id="btn">clear</button>
+            </span>
+
+        </form>
+
+    </main>
+    
+    <script src="/script.js"></script>
+</body>
+</html>
