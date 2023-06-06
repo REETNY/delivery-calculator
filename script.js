@@ -3,6 +3,7 @@
 
 
 let accessKey = `Fdy38dR4StpymzEu6acz49tdJ7Z0P`;
+let accesskey2 = `a9h5JkcBSeJJoQW9Nvjbp5qyyZXHZ`;
 
 
 class Delivery{
@@ -42,6 +43,7 @@ class Delivery{
 
     if(this._destination !== ""){
       let data = await Distance.getDistance(this._origin, this._destination);
+      console.log(data)
       this.getDistance(data);
     }
   }
@@ -185,8 +187,9 @@ class FormatNum{
 
 class Distance{
   static async getDistance(origin, destination){
-    let serverReply = await fetch(`https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${origin}&destinations=${destination}&key=${accessKey}`);
+    let serverReply = await fetch(`https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${origin}&destinations=${destination}&key=${accessKey2}`);
     let reply = await serverReply.json();
+    console.log(reply)
     let rawData = (reply.rows[0].elements[0])
     return rawData
   }
