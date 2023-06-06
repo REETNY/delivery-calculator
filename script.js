@@ -187,11 +187,11 @@ class FormatNum{
 
 class Distance{
   static async getDistance(origin, destination){
-    let serverReply = await fetch(`https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${origin}&destinations=${destination}&key=${accessKey2}`);
+    let serverReply = await fetch(`https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${origin}&destinations=${destination}&key=${accesskey2}`);
     let reply = await serverReply.json();
     console.log(reply)
     let rawData = (reply.rows[0].elements[0])
-    return rawData
+    return(rawData)
   }
 
 }
